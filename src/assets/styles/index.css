@@ -1,0 +1,60 @@
+@import 'main.css';
+@import 'toastify.css';
+
+:root {
+  --dark-blue: rgb(28, 45, 89);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.border-radius-25 {
+  border-radius: 25px !important;
+}
+
+button:focus {
+  outline: none !important;
+}
+
+.textInputItalicPlaceholder input::-webkit-input-placeholder {
+  font-style: italic;
+  font-size: small;
+}
+.textInputItalicPlaceholder input:-moz-placeholder {
+  font-style: italic;
+  font-size: small;
+}
+.textInputItalicPlaceholder input::-moz-placeholder {
+  font-style: italic;
+  font-size: small;
+}
+.textInputItalicPlaceholder input:-ms-input-placeholder {
+  font-style: italic;
+  font-size: small;
+}
+
+.customerFormFieldGrid {
+  display: grid;
+  grid-template-columns: repeat(2, auto-fill);
+}
+
+.no-underline::before {
+  border-bottom: 0px !important;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
