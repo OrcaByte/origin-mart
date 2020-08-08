@@ -26,7 +26,7 @@ import DashboardIcon from '@material-ui/icons/Dashboard';
 import { getPersistStorageValue } from '../utils';
 import MenuIcon from '@material-ui/icons/Menu';
 import Dashboard from './Dashboard';
-
+import Categories from './Categories';
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) =>
@@ -100,11 +100,17 @@ export default function Homepage(props) {
   };
 
   const menuItems = [
+    // {
+    //   title: 'Dashboard',
+    //   icon: <DashboardIcon />,
+    //   path: '/',
+    //   component: Dashboard,
+    // },
     {
-      title: 'Dashboard',
+      title: 'Categories',
       icon: <DashboardIcon />,
       path: '/',
-      component: Dashboard,
+      component: Categories,
     },
   ];
 
@@ -231,7 +237,6 @@ export default function Homepage(props) {
         <Switch>
           {menuItems.map((item) => (
             <Route
-              exact
               key={item.title}
               component={item.component}
               path={item.path}

@@ -198,3 +198,14 @@ export const isValidForm = (obj: Object, ...properties: Array<{ key: string, Fie
         })
     return hasKey;
 })
+
+
+// =================================================================
+
+
+
+
+export type ICategories = {
+    name: string,
+    subCategories: string[],
+}

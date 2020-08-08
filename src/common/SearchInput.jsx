@@ -82,6 +82,7 @@ export function TextFieldInput({
       <BootstrapInput
         onChange={(e) => onChangeValue(e.target.value)}
         className={`textInputItalicPlaceholder text-sm`}
+        autoFocus={true}
         type={inputType}
         placeholder={placeholder}
         value={value}

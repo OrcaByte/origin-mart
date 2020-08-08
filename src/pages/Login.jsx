@@ -80,13 +80,7 @@ export default function Login() {
             className={`${classes.paper} flex flex-col items-center p-7 mt-4`}
           >
             <AppIcon />
-
             <div className="my-2" />
-
-            {/* <Typography className="mt-4" align="center" variant="h6">
-              Login
-            </Typography> */}
-
             <TextFieldInput
               className="pl-3 py-1 rounded-sm border-solid border border-gray-400 w-full"
               startAdornment={
