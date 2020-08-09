@@ -17,9 +17,12 @@ const InputSelectField = ({ label, options, placeholder, ...otherProps }) => {
       item
       xs={12}
     >
-      <Typography align="center" className="text-gray-700 text-xs">
-        {label}
-      </Typography>
+      {label ?? (
+        <Typography align="center" className="text-gray-700 text-xs">
+          {label}
+        </Typography>
+      )}
+
       <MatSelectField
         options={typeof options === 'function' ? options() : options}
         {...otherProps}
@@ -41,9 +44,11 @@ const InputTextField = ({ label, ...otherProps }) => {
       item
       xs={12}
     >
-      <Typography align="center" className="text-gray-700 text-xs">
-        {label}
-      </Typography>
+      {label ?? (
+        <Typography align="center" className="text-gray-700 text-xs">
+          {label}
+        </Typography>
+      )}
       <TextFieldInput {...otherProps} />
     </Grid>
   );
@@ -59,9 +64,11 @@ const DatePickerInput = ({ label, ...otherProps }) => {
       item
       xs={12}
     >
-      <Typography align="center" className="text-gray-700 text-xs">
-        {label}
-      </Typography>
+      {label ?? (
+        <Typography align="center" className="text-gray-700 text-xs">
+          {label}
+        </Typography>
+      )}
       <MatDatePicker {...otherProps} />
     </Grid>
   );

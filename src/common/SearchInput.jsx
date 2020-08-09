@@ -2,8 +2,6 @@ import React from 'react';
 import { fade, withStyles, makeStyles } from '@material-ui/core/styles';
 import InputBase from '@material-ui/core/InputBase';
 import FormControl from '@material-ui/core/FormControl';
-import InputAdornment from '@material-ui/core/InputAdornment';
-import { Search } from '@material-ui/icons';
 
 const BootstrapInput = withStyles((theme) => ({
   root: {
@@ -34,36 +32,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const SearchAdorment = () => (
-  <InputAdornment position="start">
-    <Search />
-  </InputAdornment>
-);
-
-export default function SearchInput({ onStart, placeholder = '' }) {
-  const classes = useStyles();
-  const adorment = {};
-
-  if (onStart) {
-    adorment['startAdornment'] = <SearchAdorment />;
-  } else if (onStart === false) {
-    adorment['endAdornment'] = <SearchAdorment />;
-  }
-
-  return (
-    <FormControl
-      className={`${classes.wrapper} pl-3 border-radius-25 py-1 border-solid border-2 border-gray-400`}
-    >
-      <BootstrapInput {...adorment} placeholder={placeholder} />
-    </FormControl>
-  );
-}
-
 export function TextFieldInput({
   className = 'px-3 py-1 rounded-md border-solid border border-gray-400',
   placeholder,
   inputType = 'text',
-  cb = (value) => console.log(value),
+  cb = (fctrlNm, value) => console.log(value),
   initialValue = '',
   validator = (value) => value,
   formControlName,

@@ -208,4 +208,5 @@ export const isValidForm = (obj: Object, ...properties: Array<{ key: string, Fie
 export type ICategories = {
     name: string,
     subCategories: string[],
+    _id:string
 }

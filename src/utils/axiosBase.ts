@@ -72,13 +72,13 @@ const patch = (url: string, body: object, queryParams?: object): Observable<any 
         .pipe(respIntercepterMap, respIntercepterTap);
 };
 
-const deleteR = (url: string, id: number): Observable<any | void> => {
+const deleteR = (url: string, id: string): Observable<any | void> => {
     emitInternalEvent({
         type: 'circularProgressBar',
         data: true
     })
 
-    return defer(() => (axiosInstance.delete(`${url}/${id}`)))
+    return defer(() => (axiosInstance.delete(`${url}?_id=${id}`)))
         .pipe(respIntercepterMap, respIntercepterTap
         );
 };
